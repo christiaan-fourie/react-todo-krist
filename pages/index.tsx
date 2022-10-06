@@ -45,8 +45,9 @@ const Home = () => {
     setList(_list);
   };
 
-  const handleEnter = ({ key }) => {
-    if ( key === 'Enter' ) {
+  const handleEnter = ( keyDown: any ) => {
+    console.log()
+    if ( keyDown.key === 'Enter' ) {
       handleAdd();
     }
   }
@@ -74,7 +75,7 @@ const Home = () => {
             focus:outline-none'
           type='text' 
           value={item} 
-          onKeyDown={handleEnter} 
+          onKeyDown={handleEnter}
           onChange={(e) => setItem(e.target.value)}
         />
         <button type='button' onClick={() => handleAdd()}>
