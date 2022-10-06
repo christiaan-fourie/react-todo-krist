@@ -52,7 +52,7 @@ const Home = () => {
     }
   }
 
-  return (
+  return (    
     <div className='mx-auto w-3/4 justify-center center-content'>
       <h1 className='text-center py-5 font-thin text-6xl leading-[7rem]'> Todo App </h1>
 
@@ -155,7 +155,7 @@ const Home = () => {
                 justify-center
                 text-gray-700
                 hover:text-blue-500
-                hover:grow ease-in duration-300
+                ease-in duration-300
               '
             >
               <span className='w-1/2'>
