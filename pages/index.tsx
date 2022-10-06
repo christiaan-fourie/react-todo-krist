@@ -32,7 +32,7 @@ const Home = () => {
     };
   };
 
-  const handleDone = (id) => {
+  const handleDone = (id: any) => {
     const _list = list.map(item => {
       if ( item.id === id ) {
         return {
