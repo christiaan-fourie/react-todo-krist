@@ -58,14 +58,15 @@ const Home = () => {
 
       <div 
         className='
-          flex mx-auto w-full
+          flex mx-auto w-full lg:w-1/2
           bg-gray-100
           hover:ring focus:border-blue-500
           active:ring focus:border-blue-500
+          rounded-full
         '
       >
         <input 
-          className='
+          className='            
             text-black 
             w-3/4
             bg-transparent 
@@ -111,7 +112,7 @@ const Home = () => {
                 justify-center
               '
             >
-              <span className='w-1/2'>
+              <span className='w-1/2 pt-1'>
                 {message}
               </span>
               <svg 
@@ -121,12 +122,12 @@ const Home = () => {
                 strokeWidth={1.5} 
                 stroke="currentColor" 
                 className=" 
-                  h-6 
-                  p-1 ml-4
+                  h-9
+                  p-1 ml-6
                   relative
                   content-start
                   bg-cyan-500
-                  rounded                  
+                  rounded-full                
                 "
               >
                 <path 
@@ -138,7 +139,8 @@ const Home = () => {
             </li>
           ))}
         </ul>
-        <ul className='mt-10'>
+        <h1 className='mt-16'> Completed Tasks </h1>
+        <ul className=''>
           {list.filter(( {done} ) => done).map(({ id, message }) => (
             <li 
               key={id} 
@@ -152,6 +154,8 @@ const Home = () => {
                 m-2
                 justify-center
                 text-gray-700
+                hover:text-blue-500
+                hover:grow ease-in duration-300
               '
             >
               <span className='w-1/2'>
@@ -163,7 +167,9 @@ const Home = () => {
                 viewBox="0 0 24 24" 
                 strokeWidth={1.5} 
                 stroke="currentColor" 
-                className="w-6 h-6"
+                className="
+                  w-6 h-6
+                "
               >
                 <path 
                   strokeLinecap="round" 
