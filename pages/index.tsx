@@ -94,23 +94,7 @@ const Home = () => {
             />
           </svg> 
         </button>
-      </div>
-      <h1
-        className='
-          text-center 
-          py-4 my-4 lg:my-16
-          bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-          rounded-full
-          mx-10
-        '
-      >
-        <button type='button' onClick={() => handleAdd()}>
-          Add ...
-        </button>
-        <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full p-1 text-black mx-5 px-5'>
-          {item}
-        </span> 
-      </h1>
+      </div>      
       <div className='p-10 text-center justify-center'>
         <ul>
           {list.filter(( {done} ) => !done).map(({ id, message }) => (
