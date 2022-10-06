@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 
 const Home = () => {
+
+  const genID = () => {
+    const _id = 'item_'+(list.length+1);
+    return _id
+  };
 
   const [item, setItem] = useState('');
 
   const [list, setList] = useState([
     {
-      id: uuidv4(),
+      id: 'item_'+1,
       message: 'First Message',
       done: false
     }
@@ -19,7 +23,7 @@ const Home = () => {
       setList([
         ... list,
         {
-          id: uuidv4(),
+          id: genID(),
           message: item,
           done: false
         }
